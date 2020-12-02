@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    function checkAll() {
+      var inputs = document.getElementsByTagName('input');
+      // alert(inputs)//[object HTMLCollection]
+      for (var i = 0; i < inputs.length; i++) {
+        inputs[i].checked = true;
+      }
+
+    }
+  </script>
+</head>
+<body>
+
+  <input type="checkbox" value="cpp">C++
+  <input type="checkbox" value="java">java
+  <input type="checkbox" value="python">python
+  <br>
+  <button onclick="checkAll()">全选</button>
+</body>
+</html>

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    // 两种创建方式
+    // var patt = new RegExp('e');
+    // var patt = /e/;
+    // alert(patt);
+    // var str = 'abcd';
+
+    // 表示要求字符串中，是否包含字母a或b或c
+    // var patt = /[abc]/;
+    // var str = 'd';
+    // var str = 'a';
+
+    // 包含任意小(大)写字母和数字
+    // var patt = /[a-z]/;
+    // var patt = /[A-Z]/;
+    // var patt = /[0-9]/;
+
+    // 元字符
+    // 表示要求字符串，是否包含字母，数字，下划线
+    // var patt = /\w/;
+
+    //量词
+    // 表示要求字符串中是否包含至少一个a
+    // var patt =/a+/;
+
+    // 表示要求字符串中是否包含0个或多个a
+    // var patt =/a*/;
+
+    // 表示要求字符串是否包含1个或0个a
+    // var patt =/a?/;
+
+    // 匹配包含3个连续n的序列的字符串
+    // var patt =/a{3}/;
+
+    // 匹配包含至少3个至多5个连续n的序列的字符串
+    // var patt =/a{3，5}/;
+
+    // 匹配包含至少3个连续n的序列的字符串
+    // var patt =/a{3，}/;
+
+    // 匹配字符串必须以a结尾
+    // var patt =/a$/;
+
+    // 匹配字符串必须以a开头
+    // var patt =/^a/;
+
+    var str = 'a4a3sa'
+    alert(patt.test(str))
+  </script>
+</head>
+<body>
+
+</body>
+</html>

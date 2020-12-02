@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <div id="app">
+      <h2>{{message}}</h2>
+      <h2>总价格:{{totalPrice}}</h2>
+    </div>
+
+    <script src="../js/vue.js"></script>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data: {
+          message: 'hello',
+          books: [
+            {id: 110, name: 'Unix编程艺术', prince: 119},
+            {id: 111, name: '代码大全', prince: 119},
+            {id: 112, name: 'Python核心编程', prince: 119},
+            {id: 113, name: 'Spring实战', prince: 119},
+            {id: 114, name: '数学之美', prince: 119},
+          ]
+        },
+        computed: { //计算属性会进行缓存，如果多次使用时，计算属性只会调用一次
+          totalPrice: function () {
+            let result = 0;
+            for (let i = 0; i < this.books.length; i++) {
+              result += this.books[i].prince
+            }
+            return result
+          }
+        }
+      });
+    </script>
+    <!--P23-->
+  </body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+
+<body>
+
+  <button>按钮1</button>
+  <button>按钮2</button>
+  <button>按钮3</button>
+  <button>按钮4</button>
+  <button>按钮5</button>
+
+  <script>
+    // 变量作用域：变量在什么范围内是可用
+    {
+      var name1 = 'Li';
+      console.log(name1);
+      let name2 = 'Hua';
+      console.log(name2)
+    }
+    console.log(name1);
+    // console.log(name2);
+
+    //没有块级作用域引起的问题：for的块级
+    // var btns = document.getElementsByTagName('button');
+    // for (var i = 0; i < btns.length; i++) {
+    //   btns[i].addEventListener('click',function () {
+    //     console.log('第' + i + '个按钮被点击');
+    //   })
+    // }
+
+    //立即调用函数
+    var btns = document.getElementsByTagName('button');
+    for (var i = 0; i < btns.length; i++) {
+      (function (number) {
+        btns[i].addEventListener('click', function () {
+          console.log('第' + number + '个按钮被点击');
+        })
+      })(i)
+    }
+
+    //ES6
+    const btns = document.getElementsByTagName('button');
+    for (let i = 0; i < btns.length; i++) {
+      btns[i].addEventListener('click', function () {
+        console.log('第' + i + '个按钮被点击');
+      })
+    }
+  </script>
+  <!--2020年5月10日23点51分P26-->
+</body>
+
+</html>

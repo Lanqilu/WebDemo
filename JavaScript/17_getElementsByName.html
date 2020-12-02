@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+  <script>
+    //全选
+    function checkAll() {
+      var hobbies = document.getElementsByName('hobby');
+      // alert(hobbies);//[object NodeList]
+      // alert(hobbies.length);//3
+      for (var i = 0; i < hobbies.length; i++) {
+        hobbies[i].checked = true;
+      }
+
+    }
+
+    //全不选
+    function checkNone() {
+      var hobbies = document.getElementsByName('hobby');
+      for (var i = 0; i < hobbies.length; i++) {
+        hobbies[i].checked = false;
+      }
+    }
+
+    //反选
+    function checkReverse() {
+      var hobbies = document.getElementsByName('hobby');
+      for (var i = 0; i < hobbies.length; i++) {
+        hobbies[i].checked = !hobbies[i].checked;
+
+        // if (hobbies[i].checked) {
+        //   hobbies[i].checked = false;
+        // } else {
+        //   hobbies[i].checked = true;
+        // }
+
+      }
+    }
+  </script>
+</head>
+<body>
+  返回带有指定名称的对象集合
+  <br>
+  <input type="checkbox" name="hobby" value="cpp" checked="checked">C++
+  <input type="checkbox" name="hobby" value="java">java
+  <input type="checkbox" name="hobby" value="python">python
+  <br>
+  <button onclick="checkAll()">全选</button>
+  <button onclick="checkNone()">全不选</button>
+  <button onclick="checkReverse()">反选</button>
+</body>
+</html>

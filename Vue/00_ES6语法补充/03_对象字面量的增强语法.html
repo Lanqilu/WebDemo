@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  </head>
+  <body>
+    <script>
+
+      //一般写法
+      const obj = {
+        name: 'why0',
+        age: 18,
+        run: function () {
+          console.log('跑')
+        }
+      }
+
+      //1.属性的增强语法
+      const name = 'why';
+      const age = 19;
+
+      //ES5
+      // const obj={
+      //   name: name,
+      //   age:age,
+      // }
+
+      //ES6
+      const objProperty={
+        name,
+        age,
+      }
+      console.log(objProperty);
+
+      //2.函数的增强写法
+
+      //ES5
+      // const obj{
+      //   run:function () {
+      //
+      //   }
+      // }
+
+      //ES6
+      const objFunction={
+        run() {
+
+        }
+      }
+
+      //P28
+    </script>
+  </body>
+</html>

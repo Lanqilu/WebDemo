@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Title</title>
+</head>
+<script>
+  var arr = [];
+  alert(arr.length);//0
+  arr[0] = 12;
+  alert(arr.length);//1
+  alert(arr[0]);//12
+  arr[2] = 'abc';//自动扩容
+  alert(arr.length);//3
+  alert(arr[1]);//undefined
+
+  alert('遍历数组');
+  for (var i = 0; i < arr.length; i++) {
+    alert(arr[i]);
+  }
+</script>
+<body>
+
+</body>
+</html>
